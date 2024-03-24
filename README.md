@@ -19,6 +19,10 @@ docker compose up --build
 docker logs meshagent
 ```
 
+### Known Issues:
+  - **Desktop tab in MeshCentral does not work, exploring options**
+  - Files tab in MeshCentral does not connect directly to host system when not using chroot mode. Workaround implemented (/host directory in Files tab)
+
 ### To Do:
   [ ] Alpine Image
   [ ] More Environment Variables
