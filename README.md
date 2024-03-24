@@ -14,7 +14,7 @@ If using the root user as the Mesh User, you will need to ensure root SSH access
 git clone https://github.com/Kuuchuu/meshagent-docker.git
 cd meshagent-docker
 cp .env.example .env
-nano .env || micro .env || nvim .env || vim .env || emacs .env || vi .env
+micro .env || nano .env || nvim .env || vim .env || emacs .env || vi .env
 docker compose up --build
 docker logs meshagent
 ```
