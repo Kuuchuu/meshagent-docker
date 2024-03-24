@@ -1,0 +1,24 @@
+services:
+  meshagent:
+    container_name: meshagent
+    build: .
+    restart: always
+    network_mode: host
+    volumes:
+      - /:/host
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /etc/os-release:/etc/os-release:ro
+      - /etc/localtime:/etc/localtime:ro
+#      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+#      - ./logs:/var/log/
+      - ./data/usr/local:/usr/local/
+      - ./data/root:/root/
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+    environment:
+      - SERVER_URL=${SERVER_URL}
+      - TOKEN=${TOKEN}
+      - MESH_USER=${MESH_USER}
+      - DISPLAY=$DISPLAY
+    privileged: true
