@@ -1,4 +1,4 @@
-MeshCentral Agent in a Debian Docker container. Created for use on NixOS, but should work wherever Docker does (in fact, should work better on non-immutable/declarative systems).
+MeshCentral Agent in a Debian Docker container. Created for use on NixOS, but should work wherever Docker does ~~(in fact, should work better on non-immutable/declarative systems)~~. EDIT: chroot method needs further testing, NOT recommended!
 Images will be built for use later on, for now clone the repo, copy and edit the .env file, and build the image. Usage shown below.
 
 After building/starting the image/container, you will want to run `docker logs meshagent` and check for further instructions on adding the container's SSH key to the host system's authorized_keys file, for passwordless terminal access in MeshCentral.
